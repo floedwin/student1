@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<title>
+{% block title %} Ark International school{% endblock %}
+    {% block breadcrumb %}
+  <li class="breadcrumb-item active">About_us page</li>
+{% endblock %}
+    </title>
+{% block content %}
+<body >
+
+
+<div class="container">
+ <!--  <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>-->
+<div class="inside" >
+                <img src="\static\img\school2.jpeg"align="right" alt="school2"  width="900"   height="600">
+            </div>
+
+<div class="col-sm-6" div class="container">
+    <div class="col-md-12">
+<div class="card border-success mb-3" style="max-width: 18rem;">
+  <div class="card-header bg-transparent border-success"> Ark International school </div>
+  <div class="card-body text-success">
+    <h5 class="card-title"> Ark Internatinal school</h5>
+    <p class="card-text">Ark International school was established in the year of 2019.
+        We are a leading Service  Provider of best education,
+        etc.  </p>
+
+  </div>
+
+    </div>
+</div>
+    </div>
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base_accounts.html' %}
+{% load staticfiles %}
+{% block content %}
+<title>
+{% block title %}Log in to Ark International school{% endblock %}
+  {% block breadcrumb %}
+  <li class="breadcrumb-item active">Please Login here!!! </li>
+{% endblock %}
+</title>
+<body>
+<div class="page-header">
+<h5 class="card-title">Log in</h5>
+    </div>
+<div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-8">
+        <form method="post" novalidate>
+            {% csrf_token %}
+            {% include 'includes/form.html' %}
+            <button type="submit" class="btn btn-primary btn-block">Log in</button>
+          </form>
+        </div>
+    </div>
+  </div>
+        <div class="card-footer text-muted text-center">
+          Ark International school? <a href="{% url 'signup' %}">Sign up</a>
+        </div>
+      </div>
+      <div class="text-center py-2">
+        <div class="text-center py-2">
+         <p><strong>-- OR --</strong></p>
+        <small>
+
+            <a href="{% url 'social:begin' 'github' %}">Login with GitHub</a><br>
+           <a href="{% url 'password_reset' %}" class="text-muted">Forgot your password?</a><br>
+           <a href="{% url 'social:begin' 'twitter' %}">Login with Twitter</a><br>
+            <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
+        </small>
+      </div>
+    </div>
+
+
+</body>
+
+{% endblock %}

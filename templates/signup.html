@@ -1,0 +1,36 @@
+{% extends 'base_accounts.html' %}
+{% load staticfiles %}
+{% block content %}
+<title>
+{% block body%} Login{% endblock %}
+    {% block breadcrumb %}
+  <li class="breadcrumb-item active">Please Sign Up!!! </li>
+{% endblock %}
+    </title>
+
+<body >
+<div class="container">
+    <div class="page-header">
+<h5 class="card-title">Sign up</h5>
+    </div>
+    <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-8">
+   <!--<h3 class="card-title">Sign up</h3>-->
+          <form method="post" novalidate>
+            {% csrf_token %}
+            {% include 'includes/form.html' %}
+            <button type="submit" class="btn btn-primary btn-block">Create an account</button>
+          </form>
+        </div>
+</div>
+        <div class="card-footer text-muted text-center">
+          Already have an account? <a href="{% url 'login' %}">Log in</a>
+        </div>
+     <h1 class="text-center logo my-4">
+      <a href="{% url 'home' %}">Home</a>
+    </h1>
+      </div>
+
+</body>
+
+{% endblock %}
